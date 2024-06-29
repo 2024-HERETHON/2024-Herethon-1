@@ -25,7 +25,7 @@ class TestHomeView(ListView):
 class AccountCreateView(CreateView):
     model = User
     form_class = AccountCreationForm
-    success_url = reverse_lazy('accountApp:detail')
+    success_url = reverse_lazy('accountApp:testhome')
     context_object_name = 'target_user'
     template_name = 'accountApp/create.html'
 
