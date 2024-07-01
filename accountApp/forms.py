@@ -65,6 +65,15 @@ class AccountChangeForm(forms.ModelForm):
     def clean_password(self):
         return self.initial["password"]
 
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        password = self.cleaned_data.get("password")
+        if not password:
+            user.password = self.initial["password"]  # 기존 비밀번호 유지
+        if commit:
+            user.save()
+        return user
+
 
 class AccountLoginForm(AuthenticationForm):
     username = forms.CharField(
