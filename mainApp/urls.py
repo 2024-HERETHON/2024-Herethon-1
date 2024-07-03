@@ -5,12 +5,13 @@ app_name='mainApp'
 urlpatterns = [
     path('', main, name = 'main'),
     
-    path('challengeList/', challengeList, name = "challengeList"),
-    path('tipList/', tipList, name = "tipList"),
-    path('create/', create, name = "create"),
-    path('detail/<int:id>/', detail, name = "detail"),
-    path('update/<int:id>/', update, name = "update"),
-    path('delete/<int:id>/', delete, name = "delete"),
+    path('challengeList/', challengeList, name='challengeList'),
+    path('tipList/', tipList, name='tipList'),
+    path('create/', create, name='create'),
+    path('detail/<int:id>/', detail, name='detail'),
+    path('update/<int:id>/', update, name='update'),
+    path('delete/<int:id>/', delete, name='delete'),
+    path('ranking', ranking, name='ranking'),
     
     # 댓글 
     path('create-comment/<int:post_id>/', create_comment, name = "create-comment"),
