@@ -318,6 +318,7 @@ a {
 .community_main_sec2_post_list {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .community_main_sec2_post_list img {
@@ -383,9 +384,9 @@ a {
 }
 
 .community_main_sec4_post_toggle {
-    position: relative;
-    top: -170px;
-    left: 305px;
+    position: absolute;
+    top: 100%;
+    left: -39px;
     width: 40px;
     height: 50px;
     background-color: rgba(102, 255, 145, 0.2);
