@@ -312,6 +312,7 @@ a {
 .community_main_sec4_post_img {
     border-radius: 5px;
     margin-top: 20px;
+    object-fit: cover;
 }
 
 .community_main_sec2_post_list {
