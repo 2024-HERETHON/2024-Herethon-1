@@ -80,15 +80,15 @@
                     {% endif %}
 
                     <div class="community_main_sec4_post_text">{{ post.content }}</div>
-
-                    <!-- 내가 쓴 글만 삭제 -->
-                    {% if request.user == post.author %}
-                    <div class="community_main_sec4_post_toggle">
-                        <div><a href="{% url 'mainApp:update' post.id %}">수정</a></div>
-                        <div><a href="{% url 'mainApp:delete' post.id %}">삭제</a></div>
-                    </div>
-                    {% endif %}
                 </div>
+
+                <!-- 내가 쓴 글만 삭제 -->
+                {% if request.user == post.author %}
+                <div class="community_main_sec4_post_toggle">
+                    <div><a href="{% url 'mainApp:update' post.id %}">수정</a></div>
+                    <div><a href="{% url 'mainApp:delete' post.id %}">삭제</a></div>
+                </div>
+                {% endif %}
             </section>
         </div>
     </main>
